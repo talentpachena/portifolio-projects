@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -17,17 +18,16 @@
   <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Talent Pachena</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Talent Pachena</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     <div class="collapse navbar-collapse" id="navbarHeader">
         <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link " href="#">Twitter </a>
-            <a class="nav-item nav-link" href="#">Resume</a>
-            <a class="nav-item nav-link" href="#">Blog</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </div>
+                <a class="nav-item nav-link " href="http://sweepsouth.com/talentpachena">Twitter </a>
+                <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
+                <a class="nav-item nav-link  active" href="{% url 'allblogs' %}">Blog</a>
+         </div>               
     </div>
 </nav>
 </header>
