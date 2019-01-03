@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Blog example · Bootstrap</title>
+    <title>Talent's Blog</title>
 
     <!-- Bootstrap core CSS -->
     
@@ -42,8 +42,8 @@
     <hr/>
     {% for blog in blogs.all %}
 
-    <a href=""></a></h3>{{ blog.title }}</h3></a>
-    {{ blog.pub_date_pretty }}
+    <a href="{% url 'detail' blog.id %}"></a></h3>{{ blog.title }}</h3></a>
+    <p>{{ blog.pub_date_pretty }}</p>
     <br/>
     <img class="image-fluid" src="{{ blog.image.url }}"  height=200 width=200/>
     <br/>

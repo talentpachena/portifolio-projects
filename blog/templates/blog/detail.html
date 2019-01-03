@@ -1,1 +1,51 @@
-{{blog.titletv}}
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load staticfiles %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Blog Title</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    
+    
+  </head>
+  <body>
+    <header>
+    
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="{% url 'home' %}">Talent Pachena</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    <div class="collapse navbar-collapse" id="navbarHeader">
+        <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link " href="{% http://twitter.com/Talent22900087 %}">Twitter </a>
+                <a class="nav-item nav-link" href="{% static 'resume01.pdf' %}">Resume</a>
+                <a class="nav-item nav-link  active" href="{% url 'allblogs' %}">Blog</a>
+         </div>               
+    </div>
+</nav>
+</header>
+<main role="main">
+
+
+    <div class="container"
+
+    <h1 class="text-center pt-5">{{blog.title}}</h1>
+     <p class="text-center"> {{ blog.pub_date }}</p>  
+    <br/>
+    <br/>
+    
+    <img class="image-fluid" src="{{ blog.image.url }}"  height=200 width=200/>
+    <br/>
+    <p class ="text-center">{{ blog.body }}</p>
+    
+    </div>
+</main>
